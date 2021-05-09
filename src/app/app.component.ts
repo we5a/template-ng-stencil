@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { title } from 'add-pack';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'template-pwa-ng';
+  slogan = title;
 }
