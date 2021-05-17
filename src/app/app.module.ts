@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './test/test.component';
 import { HeaderComponent } from './header/header.component';
 import { AppDescriptionComponent } from './app-description/app-description.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppDescriptionComponent } from './app-description/app-description.compo
     TestComponent,
     HeaderComponent,
     AppDescriptionComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

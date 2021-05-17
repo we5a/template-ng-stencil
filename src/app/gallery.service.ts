@@ -8,7 +8,7 @@ interface GalleryImage {
   providedIn: 'root'
 })
 export class GalleryService {
-  private images: GalleryImage[] = [];
+  public images: GalleryImage[] = [];
 
   constructor() { }
 

@@ -1,0 +1,9 @@
+.gallery-container {
+  margin: 30px auto 0;
+  border: 1px solid gray;
+  max-width: 1000px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
