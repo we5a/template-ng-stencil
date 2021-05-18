@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
 interface GalleryImage {
-  image: string
+  id: string,
+  image: string,
 }
 
 @Injectable({
@@ -12,9 +13,11 @@ export class GalleryService {
 
   constructor() { }
 
-  addImage(image) {
-    this.images.push({ image });
+  addImage(image: GalleryImage) {
+    this.images.push(image);
+  }
+
+  deleteImage(imageId: string) {
+    this.images = this.images.filter(el => el.id !== imageId);
   }
 }
-
-

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import '@we5a/components-set/';
 import { GalleryService } from '../gallery.service';
 
@@ -7,7 +7,7 @@ import { GalleryService } from '../gallery.service';
   templateUrl: './recognizing-block.component.html',
   styleUrls: ['./recognizing-block.component.scss']
 })
-export class RecognizingBlockComponent implements OnInit, AfterViewInit, OnDestroy {
+export class RecognizingBlockComponent implements AfterViewInit {
 
   @ViewChild('test') myTestComponent: ElementRef<HTMLMyComponentElement>;
   @ViewChild('webplayer') webcamPlayer: ElementRef<HTMLWebcamPlayerElement>;
@@ -18,19 +18,11 @@ export class RecognizingBlockComponent implements OnInit, AfterViewInit, OnDestr
 
   constructor(private galleryService: GalleryService) { }
 
-  ngOnInit() {
-    document.addEventListener('screenshot', this.handleScreenshot)
-  }
-
   ngAfterViewInit() {
   //   console.log('Player', this.webcamPlayer.nativeElement);
   }
 
   handleScreenshot(e) {
     this.galleryService.addImage(e.detail);
-  }
-
-  ngOnDestroy() {
-    document.removeEventListener('screenshot', this.handleScreenshot);
   }
 }
