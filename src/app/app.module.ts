@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TestComponent } from './test/test.component';
+import { RecognizingBlockComponent } from './recognizing-block/recognizing-block.component';
 import { HeaderComponent } from './header/header.component';
 import { AppDescriptionComponent } from './app-description/app-description.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -14,7 +14,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
+    RecognizingBlockComponent,
     HeaderComponent,
     AppDescriptionComponent,
     GalleryComponent,

@@ -11,5 +11,4 @@ export class AppDescriptionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

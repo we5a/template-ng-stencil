@@ -4,10 +4,10 @@ import { GalleryService } from '../gallery.service';
 
 @Component({
   selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.scss']
+  templateUrl: './recognizing-block.component.html',
+  styleUrls: ['./recognizing-block.component.scss']
 })
-export class TestComponent implements OnInit, AfterViewInit, OnDestroy {
+export class RecognizingBlockComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @ViewChild('test') myTestComponent: ElementRef<HTMLMyComponentElement>;
   @ViewChild('webplayer') webcamPlayer: ElementRef<HTMLWebcamPlayerElement>;
@@ -23,11 +23,10 @@ export class TestComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    console.log('Player', this.webcamPlayer.nativeElement);
+  //   console.log('Player', this.webcamPlayer.nativeElement);
   }
 
   handleScreenshot(e) {
-    console.log('Screenshot handler', e.detail);
     this.galleryService.addImage(e.detail);
   }
 
