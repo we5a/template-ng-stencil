@@ -14,4 +14,8 @@ export class GalleryComponent implements OnInit {
     console.log(this.galleryService.images);
   }
 
+  deleteHandler(event, data) {
+    console.log('Need to delete', data);
+  }
+
 }
