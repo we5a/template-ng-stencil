@@ -1,14 +1,38 @@
 .gallery-container {
   margin: 30px auto 0;
   border: 1px solid gray;
-  max-width: 1000px;
+  max-width: 1080px;
   padding: 15px;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, 320px);
   grid-gap: 15px;
+  box-sizing: border-box;
 }
 
 .gallery-item {
-  margin: 10px;
+  // margin: 10px;
+}
+
+.delete-button {
+  border: 1px solid darkorange;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  font-size: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  color: darkorange;
+}
+
+.gallery-item-block {
+  position: relative;
 }

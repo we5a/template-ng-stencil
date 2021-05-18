@@ -1,6 +1,9 @@
 <div class="gallery-container">
   <div *ngFor="let imageObject of galleryService.images">
-    <img class="gallery-item"  src={{imageObject.image}}/>
+    <div class="gallery-item-block">
+      <div class="delete-button">&#215;</div>
+      <img class="gallery-item"  src={{imageObject.image}}/>
+    </div>
   </div>
 </div>
 
