@@ -5,11 +5,21 @@ interface GalleryImage {
   image: string,
 }
 
+interface Person {
+  id: string;
+  name: string;
+  age: number;
+  gender: string;
+  descriptors: Float32Array[];
+  images: string[];
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class GalleryService {
   public images: GalleryImage[] = [];
+  public persons: Person[] = [];
 
   constructor() { }
 
@@ -19,5 +29,9 @@ export class GalleryService {
 
   deleteImage(imageId: string) {
     this.images = this.images.filter(el => el.id !== imageId);
+  }
+
+  updatePersons(persons: Person[]) {
+    this.persons = persons;
   }
 }
