@@ -1,5 +1,9 @@
+:root {
+  overflow-x: auto;
+}
+
 .gallery-container {
-  margin: 30px auto 0;
+  margin: 30px auto 20px;
   border: 1px solid gray;
   max-width: 1080px;
   padding: 15px;
@@ -10,25 +14,61 @@
   box-sizing: border-box;
 }
 
-.gallery-item {}
+.person-block {
+  display: flex;
+  justify-content: center;
+}
+
+.person-container {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .person-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .person-image {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+
+  .person-info {
+    white-space: nowrap;
+    margin-right: 10px;
+    max-width: 240px;
+  }
+}
+
+.forget-button {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  margin: 10px 20px 10px 30px;
+  cursor: pointer;
+}
 
 .gallery-item-block {
   position: relative;
 
   .delete-button {
-    border: 1px solid darkorange;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    padding: 5px;
     width: 15px;
     height: 15px;
-    font-size: 25px;
+    border: 1px solid darkorange;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
     display: none;
     position: absolute;
     right: 5px;
     top: 5px;
-    cursor: pointer;
+    font-size: 25px;
     color: darkorange;
+    cursor: pointer;
   }
 
   &:hover {

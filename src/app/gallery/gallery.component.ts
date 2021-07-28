@@ -18,4 +18,8 @@ export class GalleryComponent implements OnInit {
     this.galleryService.deleteImage(imageId);
   }
 
+  forgetPerson(event, personId) {
+    this.galleryService.deletePerson(personId);
+  }
+
 }

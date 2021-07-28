@@ -34,4 +34,8 @@ export class GalleryService {
   updatePersons(persons: Person[]) {
     this.persons = persons;
   }
+
+  deletePerson(personId: string) {
+    this.persons = this.persons.filter(el => el.id !== personId);
+  }
 }

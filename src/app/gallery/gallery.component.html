@@ -1,8 +1,22 @@
 <div class="gallery-container">
-  <div *ngFor="let imageObject of galleryService.images">
+  <div *ngFor="let imageItem of galleryService.images">
     <div class="gallery-item-block">
-      <div class="delete-button" (click)="deleteHandler($event, imageObject.id)">&#215;</div>
-      <img class="gallery-item"  src={{imageObject.image}}/>
+      <div class="delete-button" (click)="deleteHandler($event, imageItem.id)">&#215;</div>
+      <img class="gallery-item" src={{imageItem.image}} />
     </div>
+  </div>
+</div>
+<div *ngFor="let personItem of galleryService.persons" class="person-block">
+  <div class="person-container">
+    <div class="person-info">{{personItem.name}} ({{personItem.gender}}, {{personItem.age}})</div>
+
+    <div class="person-thumbnails" *ngFor="let personImage of personItem.images">
+      <img class="person-image" src="{{personImage}}" />
+    </div>
+
+    <button (click)="forgetPerson($event, personItem.id)" class="forget-button" title="Forget person">
+      <img src="assets/icons/trash_x80.svg" alt="forget person">
+    </button>
+
   </div>
 </div>
