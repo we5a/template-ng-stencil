@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { title } from 'add-pack';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +6,4 @@ import { title } from 'add-pack';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  slogan = title;
 }
